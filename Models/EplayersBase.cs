@@ -1,14 +1,10 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace EplayersC.Models
+namespace Eplayers_2.Models
 {
     public class EPlayersBase
     {
-        /// <summary>
-        /// Criar diretório e arquivo, caso não existam
-        /// </summary>
-        /// <param name="_path">Caminho usado para criação de diretório e arquivo</param>
         public void CreateFolderAndFile(string _path)
         {
             string folder   = _path.Split("/")[0];
@@ -46,10 +42,6 @@ namespace EplayersC.Models
                 }
             }
         }
-
-
-
-
-        
+   
     }
 }

@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using EplayersC.Interfaces;
+using Eplayers_2.Interfaces;
 
-namespace EplayersC.Models
+namespace Eplayers_2.Models
 {
     public class Noticias : EPlayersBase , INoticias
     {
@@ -18,31 +18,17 @@ namespace EplayersC.Models
         {
             CreateFolderAndFile(PATH);
         }
-
-        /// <summary>
-        /// criar Pasta e caminho PATH
-        /// </summary>
-        /// <param name="ne"></param>
-        public void Create(Noticias ne)
+        public void Create(Noticias no)
         {
-            string[] linhas = {PrepararLinha(ne)};
+            string[] linhas = {PrepararLinha(no)};
             File.AppendAllLines(PATH, linhas);
         }
 
-        /// <summary>
-        /// Organizar linha segundo os atributos
-        /// </summary>
-        /// <param name="ne"></param>
-        /// <returns></returns>
-        private string PrepararLinha (Noticias ne)
+        private string PrepararLinha (Noticias no)
         {
-            return $"{ne.IdNoticia};{ne.Titulo};{ne.Texto};{ne.Imagem}";
+            return $"{no.IdNoticia};{no.Titulo};{no.Texto};{no.Imagem}";
         }
 
-        /// <summary>
-        /// Deletar determinada noticia
-        /// </summary>
-        /// <param name="IdNoticia"></param>
         public void Delete(int IdNoticia)
         {
             List<string> linhas = ReadAllLinesCSV(PATH);
@@ -52,10 +38,6 @@ namespace EplayersC.Models
             RewriteCSV(PATH, linhas);
         }
 
-        /// <summary>
-        /// retornar e ler as noticias com atributos dados
-        /// </summary>
-        /// <returns></returns>
         public List<Noticias> ReadAll()
         {
             List<Noticias> news = new List<Noticias>();
@@ -74,20 +56,14 @@ namespace EplayersC.Models
             return news;
         }
 
-        /// <summary>
-        /// reescever e atualizar linha
-        /// </summary>
-        /// <param name="ne"></param>
-        public void Update(Noticias ne)
+        public void Update(Noticias no)
         {
             List<string> linhas = ReadAllLinesCSV(PATH);
             
-            linhas.RemoveAll(a => a.Split(";")[0] == ne.IdNoticia.ToString());
-            linhas.Add( PrepararLinha(ne) );
+            linhas.RemoveAll(a => a.Split(";")[0] == no.IdNoticia.ToString());
+            linhas.Add( PrepararLinha(no) );
             RewriteCSV(PATH, linhas);
         }
-
-
         
     }
 }

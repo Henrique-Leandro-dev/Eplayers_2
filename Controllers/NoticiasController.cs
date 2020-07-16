@@ -5,18 +5,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using EplayersC.Models;
+using Eplayers_2.Models;
 using Microsoft.AspNetCore.Http;
 using System.IO;
 
-namespace EplayersC.Controllers
+namespace Eplayers_2.Controllers
 {
     public class NoticiasController : Controller
-    {
-        /// <summary>
-        /// ler as noticias a partir de uma bag
-        /// </summary>
-        /// <returns></returns>
+    { 
         Noticias noticiasModel = new Noticias();
         public IActionResult Index()
         {
@@ -24,32 +20,25 @@ namespace EplayersC.Controllers
             return View();
         }
 
-        /// <summary>
-        /// Cadastra uma nova noticia
-        /// </summary>
-        /// <param name="form">entarará dados</param>
-        /// <returns></returns>
         public IActionResult Publicar(IFormCollection form)
         {
             Noticias noticiasN = new Noticias();
             noticiasN.IdNoticia = Int32.Parse( form["IdNoticia"]);
             noticiasN.Titulo   = form["Titulo"];
             noticiasN.Texto    = form["Texto"];
-            
-           
+
+            // upload imagem
+              
             var file    = form.Files[0];
 
-            
             var folder  = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Noticias");
-
-           
+ 
             if(file != null)
             {
                 if(!Directory.Exists(folder)){
                     Directory.CreateDirectory(folder);
                 }
-
-                
+   
                 var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Noticias", folder, file.FileName);
                 
                 using (var stream = new FileStream(path, FileMode.Create))  
@@ -63,8 +52,8 @@ namespace EplayersC.Controllers
             {
                 noticiasN.Imagem   = "padrao.png";
             }
+            // fim upload de imagem
             
-
             noticiasModel.Create(noticiasN);
             return LocalRedirect("~/Noticias");
         }
