@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Eplayers_2\\Eplayers_2.csproj": {}
+    "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\SENAI\\Eplayers_2\\Eplayers_2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Eplayers_2\\Eplayers_2.csproj": {
+    "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\SENAI\\Eplayers_2\\Eplayers_2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Eplayers_2\\Eplayers_2.csproj",
+        "projectUniqueName": "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\SENAI\\Eplayers_2\\Eplayers_2.csproj",
         "projectName": "Eplayers_2",
-        "projectPath": "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Eplayers_2\\Eplayers_2.csproj",
+        "projectPath": "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\SENAI\\Eplayers_2\\Eplayers_2.csproj",
         "packagesPath": "C:\\Users\\henri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Eplayers_2\\obj\\",
+        "outputPath": "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\SENAI\\Eplayers_2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\henri\\AppData\\Roaming\\NuGet\\NuGet.Config"
