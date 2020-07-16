@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Eplayers_2\\EplayersC.csproj",
-      "projectName": "EplayersC",
-      "projectPath": "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Eplayers_2\\EplayersC.csproj",
+      "projectUniqueName": "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Eplayers_2\\Eplayers_2.csproj",
+      "projectName": "Eplayers_2",
+      "projectPath": "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Eplayers_2\\Eplayers_2.csproj",
       "packagesPath": "C:\\Users\\henri\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\henri\\OneDrive\\Área de Trabalho\\Eplayers_2\\obj\\",
       "projectStyle": "PackageReference",
